@@ -28,7 +28,9 @@ class App extends Component{
 
   handleCancel = (event) => {
     let edit = false;
-    this.setState({edit});
+    let newFirst = '';
+    let newLast = '';
+    this.setState({edit, newFirst, newLast});
   }
 
   handleSave = (event) => {
@@ -55,8 +57,8 @@ class App extends Component{
           <header className="App-header">
           <form className="ui large form">
             <div className="ui stacked segment">
-              <h2 style={{color: 'black'}}> First Name: {this.state.firstName} </h2>
-              <h2 style={{color: 'black'}}> Last Name: {this.state.lastName} </h2>
+              <h2> First Name: {this.state.firstName} </h2>
+              <h2> Last Name: {this.state.lastName} </h2>
             </div>
             <div className="ui fluid large blue submit button" onClick={this.handleEdit}>Edit</div>
           </form>
